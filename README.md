@@ -1,153 +1,298 @@
-﻿# t20_analysis
- 🏏 T20 Team Selection & Data Analysis
-📌 Overview
+# 🏏 T20 Cricket Data Analysis & Team Selection
 
-This project analyzes T20 cricket match data to identify player performance patterns and derive data-driven insights for team selection.
+A data-driven T20 cricket analysis project built using **Python, Pandas, NumPy, Matplotlib, Seaborn, and Power BI** to analyze player performances and derive insights for selecting a balanced T20 team.
 
-The analysis focuses on player statistics such as batting performance, bowling performance, strike rate, economy rate, consistency, and overall contribution. The objective is to transform raw match data into meaningful insights that can support a structured and data-driven approach to selecting a balanced T20 team.
+The project processes cricket match data, calculates player performance metrics, compares players across different roles, and presents the results through interactive visualizations and dashboards.
 
-🎯 Objectives
-Analyze T20 match and player performance data.
-Identify high-performing and consistent players.
-Evaluate batting and bowling performances using relevant metrics.
-Compare players across different performance indicators.
-Identify suitable players for different roles in a T20 team.
-Build interactive dashboards to communicate the insights effectively.
-Demonstrate the use of data analytics for sports decision-making.
-📊 Key Analysis
-🏏 Batting Analysis
+## ✨ Features
 
-The project analyzes:
+* Comprehensive analysis of T20 batting and bowling performances
+* Player-wise performance comparison
+* Analysis of runs, wickets, strike rate, economy, and averages
+* Identification of high-performing and consistent players
+* Role-based player analysis for team selection
+* Exploratory data analysis using Python
+* Interactive Power BI dashboard for visualizing insights
+* Data-driven approach to building a balanced T20 team
+* Visual comparison of players across multiple performance metrics
 
-Total runs scored
-Batting average
-Strike rate
-Number of matches and innings
-Boundaries
-Consistency across matches
-Performance against different opponents
-🎯 Bowling Analysis
+## 🛠️ Technologies Used
 
-The analysis includes:
+### Python
 
-Wickets taken
-Bowling economy
-Bowling average
-Strike rate
-Overs bowled
-Runs conceded
-Consistency of bowling performance
-👥 Team Selection
+Used as the primary programming language for data cleaning, transformation, analysis, metric calculation, and exploratory data analysis.
 
-Player performance is compared using multiple metrics to identify candidates for different roles:
+### Pandas
 
-Opening Batsman
-Middle-Order Batsman
-All-Rounder
-Wicketkeeper
-Fast Bowler
-Spinner
+Used for loading, cleaning, transforming, filtering, grouping, and aggregating the cricket datasets.
 
-Rather than relying on a single statistic, the analysis considers multiple performance indicators to provide a broader view of player contribution.
+### NumPy
 
-📈 Dashboard
+Used for numerical calculations and statistical operations during the analysis.
 
-The project includes an interactive dashboard that provides a visual representation of the analysis.
+### Matplotlib & Seaborn
 
-Dashboard Features
-Player performance comparison
-Batting statistics
-Bowling statistics
-Player rankings
-Team selection insights
-Performance trends
-Interactive filters
+Used to create charts and visualizations for understanding player performance, trends, distributions, and comparisons.
 
-📌 Add your dashboard screenshot here.
+### Power BI
 
-![T20 Analysis Dashboard](images/dashboard.png)
-🛠️ Technologies Used
-Technology	Purpose
-Python	Data analysis and preprocessing
-Pandas	Data manipulation
-NumPy	Numerical operations
-Matplotlib	Data visualization
-Seaborn	Statistical visualization
-Power BI	Interactive dashboard
-Jupyter Notebook	Analysis and experimentation
-🔄 Project Workflow
-Raw T20 Match Data
-        ↓
-Data Collection
-        ↓
-Data Cleaning & Preprocessing
-        ↓
-Exploratory Data Analysis
-        ↓
-Feature Engineering
-        ↓
-Player Performance Analysis
-        ↓
-Player Comparison
-        ↓
-Team Selection Analysis
-        ↓
-Power BI Dashboard
-        ↓
-Insights & Conclusions
-🧹 Data Preprocessing
+Used to build an interactive dashboard that presents player statistics and analysis in a visually accessible format.
 
-The raw dataset was processed before performing the analysis.
+### Jupyter Notebook
 
-Major preprocessing steps include:
+Used as the development environment for performing the analysis and documenting the data-processing workflow.
 
-Handling missing values
-Removing duplicate records
-Standardizing column names
-Converting data types
-Cleaning player and team names
-Aggregating match-level data into player-level statistics
-Creating derived performance metrics
-🧮 Performance Metrics
+---
 
-Some of the major metrics used in the analysis include:
+## 📊 Dataset
 
-Batting Strike Rate
-Strike Rate = (Runs / Balls Faced) × 100
-Batting Average
-Batting Average = Runs Scored / Dismissals
-Bowling Economy
+The project uses T20 cricket match data containing information related to matches, players, teams, batting, and bowling performances.
+
+The raw data is transformed into player-level statistics that can be used for performance comparison and team selection analysis.
+
+The major attributes analyzed include:
+
+* Player
+* Team
+* Runs
+* Balls Faced
+* Wickets
+* Runs Conceded
+* Overs
+* Strike Rate
+* Economy Rate
+* Batting Average
+* Bowling Average
+
+> The exact columns depend on the dataset used in this repository.
+
+---
+
+## 🧹 Data Preprocessing
+
+Before performing the analysis, the raw cricket data is cleaned and transformed.
+
+The preprocessing workflow includes:
+
+1. Loading the raw datasets using Pandas.
+2. Checking the structure and quality of the data.
+3. Handling missing and inconsistent values.
+4. Removing duplicate or unnecessary records.
+5. Standardizing player and team information.
+6. Converting columns into appropriate data types.
+7. Aggregating match-level information into player-level statistics.
+8. Creating additional performance metrics required for the analysis.
+
+This step ensures that the data is consistent and suitable for further analysis.
+
+---
+
+## 🧮 Performance Metrics
+
+Multiple performance metrics are calculated to evaluate players instead of relying on a single statistic.
+
+### 🏏 Batting Strike Rate
+
+Measures how quickly a player scores runs.
+
+```text
+Strike Rate = (Runs Scored / Balls Faced) × 100
+```
+
+### 🏏 Batting Average
+
+Measures the average number of runs scored per dismissal.
+
+```text
+Batting Average = Runs Scored / Number of Dismissals
+```
+
+### 🎯 Bowling Economy
+
+Measures the average number of runs conceded per over.
+
+```text
 Economy Rate = Runs Conceded / Overs Bowled
-Bowling Average
+```
+
+### 🎯 Bowling Average
+
+Measures the average number of runs conceded for each wicket taken.
+
+```text
 Bowling Average = Runs Conceded / Wickets
+```
 
-These metrics are considered together rather than using a single metric to evaluate a player.
+These metrics are analyzed together to obtain a broader understanding of player performance.
 
-💡 Key Insights
+---
 
-The analysis helps answer questions such as:
+## 🔍 Analysis Performed
 
-Who are the most consistent batsmen?
-Which players have the highest strike rates?
-Which bowlers have the best economy rates?
-Which players contribute in multiple areas?
-How do players compare across different performance metrics?
-Which players are suitable for specific T20 roles?
-What combination of players can provide a balanced team?
+### 🏏 Batting Analysis
 
-Add your actual findings here after completing the analysis. Avoid adding assumptions that aren't supported by your dataset.
+The batting analysis examines:
 
-Example:
+* Total runs scored by players
+* Strike rate comparison
+* Batting average
+* Consistency of run scoring
+* Top-performing batsmen
+* Player performance comparison
 
-• Player X recorded a high batting strike rate while maintaining strong consistency.
-• Player Y was among the most economical bowlers in the dataset.
-• All-rounders provided significant contribution across both batting and bowling metrics.
+This helps identify players who can contribute effectively in different batting positions.
 
-⭐ Project Highlights
-📊 Data-driven T20 player analysis
-🏏 Batting & bowling performance evaluation
-👥 Role-based player comparison
-📈 Interactive data visualization
-💡 Data-driven team selection insights
-🐍 Python-based data analysis
-📊 Power BI dashboard
+### 🎯 Bowling Analysis
+
+The bowling analysis focuses on:
+
+* Total wickets
+* Economy rate
+* Bowling average
+* Runs conceded
+* Bowling performance comparison
+* Top-performing bowlers
+
+This helps identify bowlers who can contribute effectively in different phases of a T20 match.
+
+### 🔄 All-Rounder Analysis
+
+Players contributing in both batting and bowling are analyzed separately.
+
+Their performance is compared across both disciplines to understand their overall contribution to a team.
+
+### 👥 Team Selection Analysis
+
+The final stage uses the analyzed performance metrics to identify suitable players for different roles.
+
+The analysis considers roles such as:
+
+```text
+Opening Batsman
+      ↓
+Middle-Order Batsman
+      ↓
+All-Rounder
+      ↓
+Wicketkeeper
+      ↓
+Fast Bowler
+      ↓
+Spinner
+```
+
+The objective is not simply to select players with the highest individual statistics, but to analyze how different player profiles can contribute to a balanced T20 team.
+
+---
+
+## 🔄 Project Workflow
+
+```text
+Raw Cricket Data
+       ↓
+Data Loading
+       ↓
+Data Cleaning
+       ↓
+Data Preprocessing
+       ↓
+Feature Engineering
+       ↓
+Player-Level Aggregation
+       ↓
+Batting Analysis
+       ↓
+Bowling Analysis
+       ↓
+Player Comparison
+       ↓
+Role-Based Analysis
+       ↓
+Team Selection Insights
+       ↓
+Power BI Dashboard
+```
+
+---
+
+## 📈 Dashboard
+
+The analyzed data is visualized through an interactive Power BI dashboard.
+
+The dashboard provides an overview of:
+
+* Batting performance
+* Bowling performance
+* Player comparisons
+* Performance metrics
+* Player rankings
+* Role-based analysis
+* Team selection insights
+
+### Dashboard Preview
+
+Add your dashboard screenshot here:
+
+```markdown
+![T20 Analysis Dashboard](images/dashboard.png)
+```
+
+---
+
+## 📊 Visualizations
+
+Python visualizations are used during exploratory analysis to identify patterns and compare player performances.
+
+Examples include:
+
+* Top run scorers
+* Top wicket takers
+* Strike rate comparison
+* Economy rate comparison
+* Batting average comparison
+* Bowling average comparison
+* Player performance distributions
+
+These visualizations help identify patterns before presenting the final insights through the Power BI dashboard.
+
+---
+
+## 💡 Key Insights
+
+The analysis can be used to answer questions such as:
+
+* Who are the highest run-scoring players?
+* Which players have the highest strike rates?
+* Who are the most effective bowlers?
+* Which bowlers maintain a lower economy rate?
+* Which players show strong performance across multiple metrics?
+* Which players are suitable for different T20 roles?
+* How can player statistics be used to build a balanced team?
+
+### Sample Insight Format
+
+```text
+• Player performance varies significantly when evaluated across different metrics.
+• Strike rate provides a different perspective from total runs when comparing batsmen.
+• Bowling economy and total wickets provide complementary views of bowling performance.
+• All-rounders can provide additional flexibility by contributing in both disciplines.
+```
+
+> Replace the sample insights above with the actual findings from your dataset before publishing the repository.
+
+
+## ⭐ Skills Demonstrated
+
+```text
+Python
+Pandas
+NumPy
+Data Cleaning
+Exploratory Data Analysis
+Feature Engineering
+Data Visualization
+Power BI
+Statistical Analysis
+Sports Analytics
+Data-Driven Decision Making
+```
